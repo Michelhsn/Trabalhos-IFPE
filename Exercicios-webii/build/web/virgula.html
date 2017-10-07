@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Exercício 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form name="formulario" action="virgulaServlet" onsubmit="return myFunction()" method="post">
+        <input id="numero" name="inteiro">
+
+            <button type="submit">Submit</button>
+
+        </form>
+        <p id="demo"></p>
+
+<script>
+
+ function myFunction() {
+    var x, text;
+
+    // Get the value of the input field with id="numb"
+    x = document.getElementById("numero").value;
+
+    // If x is Not a Number or less than one or greater than 10
+    if (Number.isInteger(parseFloat(x))) {
+        text = "";
+        post(NewServlet, inteiro, post);
+    } else if (x=="") {
+        text = "Digite um Número";
+        document.getElementById("demo").innerHTML = text;
+        document.getElementById("numero").focus();
+
+        return false;
+    }
+    else{
+        text = "Não é um inteiro";
+        document.getElementById("demo").innerHTML = text;
+        document.getElementById("numero").focus();
+
+        return false;
+    }
+    document.getElementById("numero").focus();
+}
+</script>
+    </body>
+</html>
