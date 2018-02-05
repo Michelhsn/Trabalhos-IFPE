@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TocTalk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  h1 {
+    text-align: center;
+    
+  }
+  body {
+    background-image: url(f.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+  
+#cadast {
+  color: black;
+}
+  </style>
+</head>
+<body>
+
+
+<div class="container-fluid" id="principal">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+  <div class="col-md-4" id="login">
+    <br>
+    <br>
+    <h1>Conecte-se ao TocTalk</h1>
+    <br>
+    <br>
+    <form>
+	  <div class="form-group">
+       <label for="nome">Nome de Usuário:</label>
+       <input type="text" class="form-control" id="nome">
+      </div>
+	  <div class="form-group">
+        <label for="senha">Senha:</label>
+        <input type="password" class="form-control" id="senha">
+	  </div>
+	  <div class="form-group" id="loginbtn">
+	  <button type="submit" id="conectar" class="btn btn-default btn-md">Conectar</button>
+      <button type="reset" class="btn btn-default btn-md">Limpar</button>
+	  </div>
+    </form>
+    <div class="col-md-4">
+    </div>
+  </div>
+
+  
+</div>
+
+<div class="container-fluid" id="modalbtn" style="text-align:center;">
+  <button id="cadast" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#cadastro">Cadastre-se</button>
+  </div>
+  
+<div class="modal fade" id="cadastro">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span class="sr-only">Fechar</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Tela de Cadastro
+                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+          
+                <form>
+				<div class="form-group">
+					<label for="nome">Nome de Usuário</label>
+					<input type="text" class="form-control" id="nomeCadastro">
+				</div>
+				<div class="form-group">
+					<label for="senha">Senha:</label>
+					<input type="password" class="form-control" id="senhaCadastro">
+				</div>
+				<button type="submit" id="cadastrar" class="btn btn-primary">Cadastre-se</button>
+				<button type="reset" class="btn btn-default">Limpar</button>
+				</form>
+                
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+					Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/login.js">
+</script>
+
+</body>
+</html>
